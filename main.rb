@@ -9,4 +9,8 @@ class MyApp < Sinatra::Base
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
     super
   end
+
+  get '/' do
+    slim :index
+  end
 end
