@@ -13,4 +13,7 @@ class MyApp < Sinatra::Base
   get '/' do
     slim :index
   end
+  post '/parse/?' do
+    json(@markdown.render(params[:text]))
+  end
 end
